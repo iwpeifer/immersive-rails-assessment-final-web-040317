@@ -1,0 +1,8 @@
+<h1><%= @user.username %></h1>
+
+<strong>Appearances Created by You:</strong><br>
+<% @user.appearances.each do |a| %>
+<%= link_to "#{a.episode.date} - #{a.guest.name}", appearance_path(a) %><br>
+<% end %><br>
+
+<%= link_to "Create a New Appearance", new_appearance_path %>

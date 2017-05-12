@@ -1,0 +1,4 @@
+<h2>Appearance on <%= link_to @appearance.episode.date, episode_path(@appearance.episode) %> for <%= link_to @appearance.guest.name, guest_path(@appearance.guest) %></h2>
+
+<p>Rating: <%= @appearance.rating %> <%= link_to "(Edit)", edit_appearance_path(@appearance) %></p><br>
+<%= link_to "All Appearances", appearances_path %>
